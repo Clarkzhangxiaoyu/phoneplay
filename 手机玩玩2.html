@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  		<meta name="apple-mobile-web-app-capable" content="yes">
+  		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<title></title>
+		<style>
+			* {
+		      margin: 0;
+		      padding: 0;
+		      font-family: 微软雅黑;
+		    }
+		
+		    div {
+		      width: 100px;
+		      height: 100px;
+		      background: #ccc;
+		      margin: 0 auto;
+		      margin-bottom: 10px;
+		      /*transition: ease 1s all;*/
+		    }
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js"></script>
+		<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>rotate旋转</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		touch.on('div','touchstart',function(e){
+			e.startRotate();
+			e.preventDefault();
+		});
+		touch.on('div','rotate',function(e){
+			$(this).css('-webkit-transform','rotate('+e.rotation+'deg)')
+		})
+		
+	})
+</script>
