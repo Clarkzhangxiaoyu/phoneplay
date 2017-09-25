@@ -5,8 +5,8 @@
 		<title></title>
 		<style type="text/css">
 			div{
-				width: 100px;
-				height: 100px;
+				width: 300px;
+				height: 300px;
 				background: #399;
 				margin: 0 auto;
 				margin-bottom: 10px;
@@ -20,9 +20,9 @@
 		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
-		<div>tap</div>
-		<div>doubletap</div>
-		<div>hold</div>
+		<div>tap点一下</div>
+		<div>doubletap点两下</div>
+		<div>hold长按</div>
 	</body>
 </html>
 <script type="text/javascript">
@@ -30,10 +30,10 @@
 		touch.on('div:nth-child(1)','tap',function(e){
 			$(this).css('background-color','deepskyblue')
 		})
-		touch.on('div:nth-child(2)','tap',function(e){
+		touch.on('div:nth-child(2)','doubletap',function(e){
 			$(this).css('background-color','yellow')
 		})
-		touch.on('div:nth-child(3)','tap',function(e){
+		touch.on('div:nth-child(3)','hold',function(e){
 			$(this).css('background-color','green')
 		})
 	})
