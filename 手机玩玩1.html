@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			div{
+				width: 100px;
+				height: 100px;
+				background: #399;
+				margin: 0 auto;
+				margin-bottom: 10px;
+				transition: ease 1s all;
+			}
+		</style>
+		<script type="text/javascript" src="js/zepto.min.js">
+			
+		</script>
+		<script src="js/touch.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div>tap</div>
+		<div>doubletap</div>
+		<div>hold</div>
+	</body>
+</html>
+<script type="text/javascript">
+	$(function(){
+		touch.on('div:nth-child(1)','tap',function(e){
+			$(this).css('background-color','deepskyblue')
+		})
+		touch.on('div:nth-child(2)','tap',function(e){
+			$(this).css('background-color','yellow')
+		})
+		touch.on('div:nth-child(3)','tap',function(e){
+			$(this).css('background-color','green')
+		})
+	})
+</script>
